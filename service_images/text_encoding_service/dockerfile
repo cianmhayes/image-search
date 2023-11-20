@@ -1,0 +1,15 @@
+FROM python:3.11-slim
+
+WORKDIR /
+
+RUN pip3 install torch --index-url https://download.pytorch.org/whl/cpu
+RUN pip3 install "transformers>=4.35.0"
+RUN pip3 install Flask
+
+RUN mkdir encoding_service
+WORKDIR /encoding_service
+COPY *.py .
+
+EXPOSE 5000
+
+ENTRYPOINT [ "flask", "--app", ".", "run", "--host=0.0.0.0"]
