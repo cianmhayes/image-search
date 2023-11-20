@@ -1,0 +1,3 @@
+A simple image indexing and search app. Primarily a learning project so some technical decisions will be made purely to incorporate a technology I'm interested in playing with, but given those sets of technologies I hope to make smart decisions about how the app works.
+
+The long term goal is a set of Rust services executing clip models via ONNX, with a postgres/pgvector database for search, and a typescript UI, all deployed using terraform and kubernetes. 
